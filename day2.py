@@ -2,7 +2,6 @@ with open('day2.txt') as day2:
     lines = day2.readlines()
 
     data = {"forward": [0] * len(lines), "down": [0] * len(lines), "up": [0] * len(lines), "depth": [0] * len(lines), "newDepth": [0] * len(lines), "horizontal": [0] * len(lines)}
-    data["forward"][0] = 1
     for i, line in zip(range(len(lines)), lines):
         x, y = line.strip().split()
         data[x][i] = int(y)
